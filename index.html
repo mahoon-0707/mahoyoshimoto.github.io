@@ -1,155 +1,372 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Maho Yoshimoto — Network Engineer & Cybersecurity Enthusiast</title>
-  <meta name="description" content="Maho Yoshimoto — Network Engineer & Cybersecurity Enthusiast. Projects, skills, contact." />
+  <meta charset="utf-8">
+  <title>Maho Yoshimoto – Network Engineer & Cybersecurity Enthusiast</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Projects, skills, experience, education – networking, cybersecurity, AWS, Python, Wireshark, Tableau.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#ffffff;
-      --muted:#6b7280;
-      --text:#0f172a;
-      --accent:#0b74ff;
-      --card:#f8fafc;
-      --border:#e6eef8;
-      --radius:14px;
-      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    :root {
+      --bg: #ffffff;
+      --card: #f8fafc;
+      --ink: #0f172a;
+      --muted: #6b7280;
+      --brand: #0b74ff;
+      --chip: #f1f5f9;
+      --stroke: #e2e8f0;
     }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--text);line-height:1.5}
-    .container{max-width:980px;margin:48px auto;padding:28px}
-    header{display:flex;gap:28px;align-items:center}
-    .avatar{width:120px;height:120px;border-radius:999px;flex:0 0 120px;overflow:hidden;border:2px solid var(--border);background:#f1f5f9}
-    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
-    .intro h1{margin:0;font-size:28px}
-    .intro p.title{margin:6px 0 0;color:var(--muted);font-weight:600}
-    .intro .links{margin-top:10px;display:flex;gap:10px;flex-wrap:wrap}
-    a.btn{display:inline-block;padding:8px 12px;border-radius:8px;background:transparent;border:1px solid var(--border);text-decoration:none;color:var(--text);font-weight:600}
-    a.primary{background:var(--accent);color:#fff;border:none}
-    main{margin-top:32px;display:grid;grid-template-columns:1fr 320px;gap:28px}
-    section.card{background:var(--card);border:1px solid var(--border);padding:20px;border-radius:var(--radius)}
-    h2{margin:0 0 12px;font-size:18px}
-    .about p{margin:0;color:var(--muted)}
-    .skills ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:8px}
-    .skills li{padding:8px 10px;background:white;border-radius:8px;border:1px solid var(--border);font-size:14px}
-    .projects .proj{margin-bottom:14px;padding:12px;border-radius:10px;background:white;border:1px solid var(--border)}
-    .proj h3{margin:0 0 6px;font-size:16px}
-    .proj p{margin:0;color:var(--muted);font-size:14px}
-    .contact .row{display:flex;align-items:center;gap:10px;margin-bottom:8px;color:var(--muted)}
-    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
-    @media (max-width:880px){
-      main{grid-template-columns:1fr; padding-top:12px}
-      .avatar{width:96px;height:96px;flex:0 0 96px}
+
+    * {
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height: 1.55
+    }
+
+    a {
+      color: var(--brand);
+      text-decoration: none
+    }
+
+    a:hover {
+      opacity: .9
+    }
+
+    .wrap {
+      max-width: 1080px;
+      margin: auto;
+      padding: 28px
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px
+    }
+
+    .me h1 {
+      font-size: 28px;
+      margin: 0
+    }
+
+    .me p {
+      margin: 6px 0 0;
+      color: var(--muted)
+    }
+
+    nav a {
+      margin-left: 16px;
+      color: var(--muted)
+    }
+
+    nav a:hover {
+      color: var(--ink)
+    }
+
+    .section {
+      margin: 32px 0
+    }
+
+    .section h2 {
+      font-size: 22px;
+      margin: 0 0 16px;
+      border-bottom: 1px solid var(--stroke);
+      padding-bottom: 10px
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px
+    }
+
+    .card {
+      grid-column: span 12;
+      background: var(--card);
+      border: 1px solid var(--stroke);
+      border-radius: 14px;
+      padding: 18px
+    }
+
+    @media(min-width:800px) {
+      .card--half {
+        grid-column: span 6
+      }
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 18px
+    }
+
+    .card p {
+      margin: 6px 0 0;
+      color: var(--muted)
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px
+    }
+
+    .tag {
+      background: var(--chip);
+      border: 1px solid var(--stroke);
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--muted)
+    }
+
+    .actions {
+      margin-top: 12px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap
+    }
+
+    .btn {
+      display: inline-block;
+      border: 1px solid var(--stroke);
+      background: var(--chip);
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-size: 13px;
+      color: var(--ink)
+    }
+
+    .btn:hover {
+      opacity: .9;
+      border-color: var(--brand)
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px
+    }
+
+    @media(min-width:900px) {
+      .two-col {
+        grid-template-columns: 1.4fr .9fr
+      }
+    }
+
+    .bullet {
+      margin: 6px 0;
+      color: var(--muted)
+    }
+
+    .pill {
+      display: inline-block;
+      border: 1px solid var(--stroke);
+      border-radius: 999px;
+      padding: 6px 10px;
+      margin: 4px 6px 0 0;
+      background: var(--chip);
+      font-size: 12px;
+      color: var(--muted)
+    }
+
+    .small {
+      font-size: 12px;
+      color: var(--muted)
+    }
+
+    .notice {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 6px
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
+  <div class="wrap">
     <header>
-      <div class="avatar" aria-hidden="true">
-        <!-- Add your photo named "avatar.jpg" to the repo root for this to show -->
-        <img src="avatar.jpg" alt="Maho Yoshimoto">
-      </div>
-      <div class="intro">
+      <div class="me">
         <h1>Maho Yoshimoto</h1>
-        <p class="title">Network Engineer &amp; Cybersecurity Enthusiast</p>
-        <div class="links">
-          <a class="btn primary" href="#projects">Projects</a>
-          <a class="btn" href="#contact">Contact</a>
-          <a class="btn" href="https://github.com/mahoon-0707/mahoyoshimoto.github.io" target="_blank" rel="noopener">View repo</a>
-        </div>
+        <p>Network Engineer | Cybersecurity • AWS • Wireshark • Python • Tableau</p>
       </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
-    <main>
-      <div>
-        <section id="about" class="card about">
-          <h2>About</h2>
-          <p>
-            I’m a customer-focused IT support professional with over six years of experience across SaaS, travel, and
-            technology industries. My passion for cybersecurity and networking drives me to build secure, efficient systems and continuously expand my technical expertise. I enjoy solving complex problems, collaborating across teams, and contributing to innovative infrastructure projects that make technology work seamlessly for users.
-          </p>
-        </section>
-
-        <section id="projects" class="card projects" style="margin-top:18px">
-          <h2>Projects</h2>
-
-          <div class="proj">
-            <h3>A. Wireshark / Incident Analysis</h3>
-            <p>
-              MID Term-1 Wireshark analysis: investigated PCAP and logs for credential stuffing + Bonitasoft exploit
-              (CVE-2022-25237). Write-up & packet analysis available: <a href="https://medium.com/@jacobhegy/hack-the-box-sherlock-write-ups-meerkat-jacob-hegy-606f6ba2eef0" target="_blank" rel="noopener">analysis / related write-up</a>.
-            </p>
-          </div>
-
-          <div class="proj">
-            <h3>B. AWS Weather Alert Wizard</h3>
-            <p>Serverless pipeline to fetch/analyze weather and send alerts. (AWS Lambda, DynamoDB, SES, CloudWatch)</p>
-          </div>
-
-          <div class="proj">
-            <h3>C. Games Analysis — ML & Tableau</h3>
-            <p>Data cleaning, modeling and interactive dashboards to surface sales & platform trends.</p>
-          </div>
-
-          <div class="proj">
-            <h3>D. Diabetes Prediction (ML)</h3>
-            <p>Predictive model using ensemble methods and feature engineering (scikit-learn, XGBoost).</p>
-          </div>
-
-          <div class="proj">
-            <h3>E. Sales Analysis — SQL & Tableau</h3>
-            <p>Exploratory data analysis and dashboarding to reveal sales trends and customer insights.</p>
-          </div>
-        </section>
-
-        <section class="card" style="margin-top:18px">
-          <h2>Certifications & Education</h2>
-          <p style="margin:0;color:var(--muted)">
-            • Cisco: Introduction to Cybersecurity; Linux Unhatched<br>
-            • CCNA 200-301 course (Udemy), ISC2 prep course<br>
-            • Cyber Job Simulations — Deloitte, Fujitsu, Mastercard (Sep 2025)<br>
-            • Post-Secondary Diploma (Cybersecurity Risk Management) — Canadian College of Technology & Business
-          </p>
-        </section>
+    <section class="section" id="about">
+      <div class="about">
+        <h2>About me</h2>
+        <p>
+          I’m a customer-focused IT support professional with over six years of experience across SaaS, travel, and
+          technology industries. My passion for cybersecurity and networking drives me to build secure, efficient
+          systems and continuously expand my technical expertise. I enjoy solving complex problems, collaborating
+          across teams, and contributing to innovative infrastructure projects that make technology work seamlessly
+          for users.
+        </p>
       </div>
+    </section>
 
-      <aside>
-        <section class="card skills">
-          <h2>Skills</h2>
-          <ul>
-            <li>Networking: Cisco Packet Tracer</li>
-            <li>Wireshark</li>
-            <li>Linux & OS</li>
-            <li>Splunk / ELK / Grafana</li>
-            <li>Python / MySQL</li>
-            <li>HTML / CSS / JavaScript</li>
-            <li>AWS Cloud</li>
-            <li>Tableau / SQL</li>
-            <li>Jira / Confluence / Zendesk</li>
-            <li>Problem-Solving & Communication</li>
-          </ul>
-        </section>
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <div class="card card--half">
+          <h3><a href="https://medium.com/@jacobhegy/hack-the-box-sherlock-write-ups-meerkat-jacob-hegy-606f6ba2eef0"
+              target="_blank" rel="noopener">Wireshark / Incident Analysis</a></h3>
+          <p>MID Term-1 Wireshark analysis: investigated PCAP and logs for credential stuffing + Bonitasoft exploit
+            (CVE-2022-25237).</p>
+          <div class="tags">
+            <span class="tag">Wireshark</span>
+            <span class="tag">PCAP</span>
+            <span class="tag">Incident Response</span>
+          </div>
+          <div class="actions">
+            <a class="btn"
+              href="https://medium.com/@jacobhegy/hack-the-box-sherlock-write-ups-meerkat-jacob-hegy-606f6ba2eef0"
+              target="_blank" rel="noopener">Write-up</a>
+          </div>
+        </div>
 
-        <section id="contact" class="card contact" style="margin-top:18px">
-          <h2>Contact</h2>
-          <div class="row"><strong>Email:</strong>&nbsp;<a href="mailto:maho.y0707@gmail.com">maho.y0707@gmail.com</a></div>
-          <div class="row"><strong>LinkedIn:</strong>&nbsp;<a href="https://www.linkedin.com/in/maho-yoshimoto" target="_blank" rel="noopener">linkedin.com/in/maho-yoshimoto</a></div>
-          <div class="row"><strong>GitHub:</strong>&nbsp;<a href="https://github.com/mahoon-0707/mahoyoshimoto.github.io" target="_blank" rel="noopener">mahoon-0707</a></div>
-          <div style="margin-top:12px"><a class="btn" href="mailto:maho.y0707@gmail.com">Send email</a></div>
-        </section>
-      </aside>
-    </main>
+        <div class="card card--half">
+          <h3>AWS Weather Alert Wizard</h3>
+          <p>Serverless pipeline to fetch/analyze weather and send alerts.</p>
+          <div class="tags">
+            <span class="tag">AWS Lambda</span>
+            <span class="tag">DynamoDB</span>
+            <span class="tag">SES</span>
+            <span class="tag">CloudWatch</span>
+          </div>
+        </div>
 
-    <footer>
-      <div>Built by Maho Yoshimoto — Network Engineer &amp; Cybersecurity Enthusiast</div>
-      <div style="margin-top:8px">© <span id="year"></span></div>
+        <div class="card card--half">
+          <h3>Games Analysis — ML & Tableau</h3>
+          <p>Data cleaning, modeling and interactive dashboards to surface sales & platform trends.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Tableau</span>
+            <span class="tag">Data Viz</span>
+          </div>
+        </div>
+
+        <div class="card card--half">
+          <h3>Diabetes Prediction (ML)</h3>
+          <p>Predictive model using ensemble methods and feature engineering.</p>
+          <div class="tags">
+            <span class="tag">scikit-learn</span>
+            <span class="tag">XGBoost</span>
+            <span class="tag">Feature Engineering</span>
+          </div>
+        </div>
+
+        <div class="card card--half">
+          <h3>Sales Analysis — SQL & Tableau</h3>
+          <p>Exploratory data analysis and dashboarding to reveal sales trends and customer insights.</p>
+          <div class="tags">
+            <span class="tag">SQL</span>
+            <span class="tag">Tableau</span>
+            <span class="tag">EDA</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <h2>Skills & Tools</h2>
+      <div class="card">
+        <div>
+          <span class="pill">Cisco Packet Tracer</span>
+          <span class="pill">Wireshark</span>
+          <span class="pill">Linux & OS</span>
+          <span class="pill">Splunk / ELK / Grafana</span>
+          <span class="pill">Python</span>
+          <span class="pill">MySQL</span>
+          <span class="pill">HTML / CSS / JS</span>
+          <span class="pill">AWS Cloud</span>
+          <span class="pill">Tableau</span>
+          <span class="pill">SQL</span>
+          <span class="pill">Jira / Confluence / Zendesk</span>
+          <span class="pill">Problem-Solving</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <h2>Experience</h2>
+      <div class="card">
+        <h3>IT Support Specialist – SaaS Startup</h3>
+        <p class="bullet">• Managed onboarding/offboarding workflows for 200+ users across global teams.</p>
+        <p class="bullet">• Resolved 95% of Tier 1–2 tickets within SLA; reduced repeat issues via documentation.</p>
+        <p class="bullet">• Configured SSO, MDM, and network access policies using Okta and Jamf.</p>
+      </div>
+      <div class="card">
+        <h3>Technical Support Engineer – Travel Tech Platform</h3>
+        <p class="bullet">• Supported internal tools and APIs; triaged network and application performance issues.</p>
+        <p class="bullet">• Collaborated with DevOps to deploy monitoring alerts using Datadog and PagerDuty.</p>
+      </div>
+      <div class="card">
+        <h3>Customer Success Associate – Cloud Infrastructure Provider</h3>
+        <p class="bullet">• Guided clients through AWS migrations; created runbooks and knowledge base articles.</p>
+        <p class="bullet">• Conducted security posture reviews and compliance checklist walkthroughs.</p>
+      </div>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATIONS -->
+    <section class="section" id="education">
+      <h2>Education & Certifications</h2>
+      <div class="two-col">
+        <div class="card">
+          <h3>Education</h3>
+          <p class="bullet"><b>Canadian College of Technology & Business</b> — Post-Secondary Diploma in Cybersecurity
+            Risk Management</p>
+        </div>
+        <div class="card">
+          <h3>Certifications</h3>
+          <p class="bullet">• Cisco: Introduction to Cybersecurity; Linux Unhatched</p>
+          <p class="bullet">• CCNA 200-301 course (Udemy), ISC2 prep course</p>
+          <p class="bullet">• Cyber Job Simulations — Deloitte, Fujitsu, Mastercard (Sep 2025)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p><a href="mailto:maho.y0707@gmail.com">maho.y0707@gmail.com</a> •
+          <a href="https://www.linkedin.com/in/maho-yoshimoto" target="_blank" rel="noopener">LinkedIn</a> •
+          <a href="https://github.com/mahoon-0707" target="_blank" rel="noopener">GitHub</a>
+        </p>
+      </div>
+    </section>
+
+    <footer class="wrap">
+      <div class="small">©
+        <script>document.write(new Date().getFullYear())</script> Maho Yoshimoto • GitHub Pages
+      </div>
     </footer>
   </div>
-
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
+
 </html>
