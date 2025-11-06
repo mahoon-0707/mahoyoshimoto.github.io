@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Maho Yoshimoto — Network Engineer & Cybersecurity Enthusiast</title>
+  <meta name="description" content="Maho Yoshimoto — Network Engineer & Cybersecurity Enthusiast. Projects, skills, contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff;
+      --muted:#6b7280;
+      --text:#0f172a;
+      --accent:#0b74ff;
+      --card:#f8fafc;
+      --border:#e6eef8;
+      --radius:14px;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);line-height:1.5}
+    .container{max-width:980px;margin:48px auto;padding:28px}
+    header{display:flex;gap:28px;align-items:center}
+    .avatar{width:120px;height:120px;border-radius:999px;flex:0 0 120px;overflow:hidden;border:2px solid var(--border);background:#f1f5f9}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .intro h1{margin:0;font-size:28px}
+    .intro p.title{margin:6px 0 0;color:var(--muted);font-weight:600}
+    .intro .links{margin-top:10px;display:flex;gap:10px;flex-wrap:wrap}
+    a.btn{display:inline-block;padding:8px 12px;border-radius:8px;background:transparent;border:1px solid var(--border);text-decoration:none;color:var(--text);font-weight:600}
+    a.primary{background:var(--accent);color:#fff;border:none}
+    main{margin-top:32px;display:grid;grid-template-columns:1fr 320px;gap:28px}
+    section.card{background:var(--card);border:1px solid var(--border);padding:20px;border-radius:var(--radius)}
+    h2{margin:0 0 12px;font-size:18px}
+    .about p{margin:0;color:var(--muted)}
+    .skills ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:8px}
+    .skills li{padding:8px 10px;background:white;border-radius:8px;border:1px solid var(--border);font-size:14px}
+    .projects .proj{margin-bottom:14px;padding:12px;border-radius:10px;background:white;border:1px solid var(--border)}
+    .proj h3{margin:0 0 6px;font-size:16px}
+    .proj p{margin:0;color:var(--muted);font-size:14px}
+    .contact .row{display:flex;align-items:center;gap:10px;margin-bottom:8px;color:var(--muted)}
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+    @media (max-width:880px){
+      main{grid-template-columns:1fr; padding-top:12px}
+      .avatar{width:96px;height:96px;flex:0 0 96px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar" aria-hidden="true">
+        <!-- Add your photo named "avatar.jpg" to the repo root for this to show -->
+        <img src="avatar.jpg" alt="Maho Yoshimoto">
+      </div>
+      <div class="intro">
+        <h1>Maho Yoshimoto</h1>
+        <p class="title">Network Engineer &amp; Cybersecurity Enthusiast</p>
+        <div class="links">
+          <a class="btn primary" href="#projects">Projects</a>
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn" href="https://github.com/mahoon-0707/mahoyoshimoto.github.io" target="_blank" rel="noopener">View repo</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div>
+        <section id="about" class="card about">
+          <h2>About</h2>
+          <p>
+            I’m a customer-focused IT support professional with over six years of experience across SaaS, travel, and
+            technology industries. My passion for cybersecurity and networking drives me to build secure, efficient systems and continuously expand my technical expertise. I enjoy solving complex problems, collaborating across teams, and contributing to innovative infrastructure projects that make technology work seamlessly for users.
+          </p>
+        </section>
+
+        <section id="projects" class="card projects" style="margin-top:18px">
+          <h2>Projects</h2>
+
+          <div class="proj">
+            <h3>A. Wireshark / Incident Analysis</h3>
+            <p>
+              MID Term-1 Wireshark analysis: investigated PCAP and logs for credential stuffing + Bonitasoft exploit
+              (CVE-2022-25237). Write-up & packet analysis available: <a href="https://medium.com/@jacobhegy/hack-the-box-sherlock-write-ups-meerkat-jacob-hegy-606f6ba2eef0" target="_blank" rel="noopener">analysis / related write-up</a>.
+            </p>
+          </div>
+
+          <div class="proj">
+            <h3>B. AWS Weather Alert Wizard</h3>
+            <p>Serverless pipeline to fetch/analyze weather and send alerts. (AWS Lambda, DynamoDB, SES, CloudWatch)</p>
+          </div>
+
+          <div class="proj">
+            <h3>C. Games Analysis — ML & Tableau</h3>
+            <p>Data cleaning, modeling and interactive dashboards to surface sales & platform trends.</p>
+          </div>
+
+          <div class="proj">
+            <h3>D. Diabetes Prediction (ML)</h3>
+            <p>Predictive model using ensemble methods and feature engineering (scikit-learn, XGBoost).</p>
+          </div>
+
+          <div class="proj">
+            <h3>E. Sales Analysis — SQL & Tableau</h3>
+            <p>Exploratory data analysis and dashboarding to reveal sales trends and customer insights.</p>
+          </div>
+        </section>
+
+        <section class="card" style="margin-top:18px">
+          <h2>Certifications & Education</h2>
+          <p style="margin:0;color:var(--muted)">
+            • Cisco: Introduction to Cybersecurity; Linux Unhatched<br>
+            • CCNA 200-301 course (Udemy), ISC2 prep course<br>
+            • Cyber Job Simulations — Deloitte, Fujitsu, Mastercard (Sep 2025)<br>
+            • Post-Secondary Diploma (Cybersecurity Risk Management) — Canadian College of Technology & Business
+          </p>
+        </section>
+      </div>
+
+      <aside>
+        <section class="card skills">
+          <h2>Skills</h2>
+          <ul>
+            <li>Networking: Cisco Packet Tracer</li>
+            <li>Wireshark</li>
+            <li>Linux & OS</li>
+            <li>Splunk / ELK / Grafana</li>
+            <li>Python / MySQL</li>
+            <li>HTML / CSS / JavaScript</li>
+            <li>AWS Cloud</li>
+            <li>Tableau / SQL</li>
+            <li>Jira / Confluence / Zendesk</li>
+            <li>Problem-Solving & Communication</li>
+          </ul>
+        </section>
+
+        <section id="contact" class="card contact" style="margin-top:18px">
+          <h2>Contact</h2>
+          <div class="row"><strong>Email:</strong>&nbsp;<a href="mailto:maho.y0707@gmail.com">maho.y0707@gmail.com</a></div>
+          <div class="row"><strong>LinkedIn:</strong>&nbsp;<a href="https://www.linkedin.com/in/maho-yoshimoto" target="_blank" rel="noopener">linkedin.com/in/maho-yoshimoto</a></div>
+          <div class="row"><strong>GitHub:</strong>&nbsp;<a href="https://github.com/mahoon-0707/mahoyoshimoto.github.io" target="_blank" rel="noopener">mahoon-0707</a></div>
+          <div style="margin-top:12px"><a class="btn" href="mailto:maho.y0707@gmail.com">Send email</a></div>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      <div>Built by Maho Yoshimoto — Network Engineer &amp; Cybersecurity Enthusiast</div>
+      <div style="margin-top:8px">© <span id="year"></span></div>
+    </footer>
+  </div>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
