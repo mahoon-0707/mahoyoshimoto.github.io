@@ -3,10 +3,17 @@
 
 <head>
   <meta charset="utf-8">
+<<<<<<< HEAD
   <title>Maho Yoshimoto – Network Engineer & Cybersecurity Enthusiast</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
     content="Projects, skills, experience, education – networking, cybersecurity, AWS, Python, Wireshark, Tableau.">
+=======
+  <title>Maho Yoshimoto – Cybersecurity Analyst & IT Support Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Cybersecurity Risk Management student with 6+ years in IT support. Wireshark forensics, SIEM, VoIP packet analysis, MITRE ATT&CK, CCNA in progress.">
+>>>>>>> 1003d02 (update)
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -53,9 +60,46 @@
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
+<<<<<<< HEAD
       align-items: center;
       justify-content: space-between;
       margin-bottom: 24px
+=======
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    .subtitle {
+      margin: 6px 0 0;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 15px;
+    }
+
+    .me {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: flex-end;
+      min-width: 300px;
+    }
+
+    nav a {
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    nav a:hover {
+      color: var(--ink);
+>>>>>>> 1003d02 (update)
     }
 
     .me h1 {
@@ -187,12 +231,15 @@
     .small {
       font-size: 12px;
       color: var(--muted)
+<<<<<<< HEAD
     }
 
     .notice {
       color: var(--muted);
       font-size: 13px;
       margin-top: 6px
+=======
+>>>>>>> 1003d02 (update)
     }
   </style>
 </head>
@@ -202,9 +249,16 @@
     <header>
       <div class="me">
         <h1>Maho Yoshimoto</h1>
+<<<<<<< HEAD
         <p>Network Engineer | Cybersecurity • AWS • Wireshark • Python • Tableau</p>
       </div>
       <nav>
+=======
+        <p class="subtitle">Cybersecurity Analyst | IT Support Engineer | Wireshark • SIEM </p>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+>>>>>>> 1003d02 (update)
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
@@ -213,6 +267,7 @@
       </nav>
     </header>
 
+<<<<<<< HEAD
     <section class="section" id="about">
       <div class="about">
         <h2>About me</h2>
@@ -222,6 +277,29 @@
           systems and continuously expand my technical expertise. I enjoy solving complex problems, collaborating
           across teams, and contributing to innovative infrastructure projects that make technology work seamlessly
           for users.
+=======
+    <!-- ABOUT ME -->
+    <section class="section" id="about">
+      <div class="about">
+        <h2>About Me</h2>
+        <p>
+          Cybersecurity Risk Management student at Canadian College of Technology and Business (CCTB), developing
+          practical expertise in <strong>SIEM operations, network forensics, and incident response</strong> through
+          hands-on coursework and lab simulations.
+        </p>
+        <p>
+          Coursework includes configuring <strong>Splunk for log ingestion, correlation, and real-time
+            alerting</strong>, mapping malicious behaviors to the <strong>MITRE ATT&CK framework</strong> (e.g.,
+          credential access, persistence, and execution tactics), simulating enterprise network defenses using
+          <strong>Cisco Packet Tracer</strong>, and analyzing packet captures with <strong>Wireshark</strong> to
+          identify anomalies in HTTP, SIP, and SSH traffic.
+        </p>
+        <p>
+          Applied <strong>SIP/VoIP troubleshooting and packet analysis</strong> in 2,500+ real-world support cases at
+          Dialpad Japan, diagnosing jitter, packet loss, and codec issues across Polycom and Yealink phones. Currently
+          advancing skills in <strong>Python scripting, Linux (SSH), and AWS fundamentals</strong> to prepare for SOC
+          analyst and network security roles.
+>>>>>>> 1003d02 (update)
         </p>
       </div>
     </section>
@@ -230,6 +308,7 @@
     <section class="section" id="projects">
       <h2>Projects</h2>
       <div class="grid">
+<<<<<<< HEAD
         <div class="card card--half">
           <h3><a href="https://medium.com/@jacobhegy/hack-the-box-sherlock-write-ups-meerkat-jacob-hegy-606f6ba2eef0"
               target="_blank" rel="noopener">Wireshark / Incident Analysis</a></h3>
@@ -285,16 +364,72 @@
             <span class="tag">SQL</span>
             <span class="tag">Tableau</span>
             <span class="tag">EDA</span>
+=======
+        <!-- Existing Project 1: Wireshark -->
+        <div class="card card--half">
+          <h3><a href="https://github.com/mahoyoshimoto/meerkat-forensics" target="_blank" rel="noopener">Wireshark</a>
+          </h3>
+          <p>Meerkat - Forensic Investigation (HTB Sherlock)</p>
+          <div class="tags">
+            <span class="tag">Wireshark</span>
+            <span class="tag">Incident Response</span>
+            <span class="tag">MITRE ATT&CK</span>
+            <span class="tag">CVE-2022-25237</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://github.com/mahoyoshimoto/meerkat-forensics" target="_blank"
+              rel="noopener">GitHub Repo</a>
+          </div>
+        </div>
+
+
+
+        <!-- Project 2: Assignment 5 -->
+        <div class="card card--half">
+          <h3><a href="https://github.com/mahoon-0707/assignment5" target="_blank" rel="noopener">Python</a></h3>
+          <p>Average Calculator & Parity Checker</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Algorithms</span>
+            <span class="tag">Conditionals</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://github.com/mahoon-0707/assignment5" target="_blank" rel="noopener">GitHub
+              Repo</a>
+          </div>
+        </div>
+
+
+
+        <!-- Project 3: Final Exam -->
+        <div class="card card--half">
+          <h3><a href="https://github.com/mahoon-0707/finalexam" target="_blank" rel="noopener">PHP & Pyhton</a></h3>
+          <p>Deployed a scalable web application on AWS EC2 with Apache and Python, implemented gift selection logic
+            using bitwise operations, and integrated a load balancer to evenly distribute traffic across multiple
+            instances.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Cybersecurity</span>
+            <span class="tag">Capstone</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://github.com/mahoon-0707/finalexam" target="_blank" rel="noopener">GitHub
+              Repo</a>
+>>>>>>> 1003d02 (update)
           </div>
         </div>
       </div>
     </section>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1003d02 (update)
     <!-- SKILLS -->
     <section class="section" id="skills">
       <h2>Skills & Tools</h2>
       <div class="card">
         <div>
+<<<<<<< HEAD
           <span class="pill">Cisco Packet Tracer</span>
           <span class="pill">Wireshark</span>
           <span class="pill">Linux & OS</span>
@@ -307,6 +442,21 @@
           <span class="pill">SQL</span>
           <span class="pill">Jira / Confluence / Zendesk</span>
           <span class="pill">Problem-Solving</span>
+=======
+          <span class="pill">Wireshark</span>
+          <span class="pill">SIEM (Splunk, ELK, Grafana)</span>
+          <span class="pill">SIP / VoIP Analysis</span>
+          <span class="pill">Polycom / Yealink</span>
+          <span class="pill">Python</span>
+          <span class="pill">Linux (SSH)</span>
+          <span class="pill">MySQL</span>
+          <span class="pill">AWS (Lambda, CloudWatch, IAM)</span>
+          <span class="pill">Cisco Packet Tracer</span>
+          <span class="pill">Jira / Confluence / Zendesk</span>
+          <span class="pill">MITRE ATT&CK</span>
+          <span class="pill">Incident Response</span>
+          <span class="pill">Threat Intelligence</span>
+>>>>>>> 1003d02 (update)
         </div>
       </div>
     </section>
@@ -315,6 +465,7 @@
     <section class="section" id="experience">
       <h2>Experience</h2>
       <div class="card">
+<<<<<<< HEAD
         <h3>IT Support Specialist – SaaS Startup</h3>
         <p class="bullet">• Managed onboarding/offboarding workflows for 200+ users across global teams.</p>
         <p class="bullet">• Resolved 95% of Tier 1–2 tickets within SLA; reduced repeat issues via documentation.</p>
@@ -329,6 +480,26 @@
         <h3>Customer Success Associate – Cloud Infrastructure Provider</h3>
         <p class="bullet">• Guided clients through AWS migrations; created runbooks and knowledge base articles.</p>
         <p class="bullet">• Conducted security posture reviews and compliance checklist walkthroughs.</p>
+=======
+        <h3>Customer Support Representative, Tier 1 – Dialpad Japan Inc.</h3>
+        <p class="bullet">Resolved 2,500+ client issues; closed 60+ tickets weekly via Zendesk with 90%+ CSAT.</p>
+        <p class="bullet">Troubleshot desktop/mobile apps and Polycom/Yealink IP phones; analyzed SIP logs and VoIP
+          packets for packet loss, jitter, and codec errors using Wireshark fundamentals.</p>
+        <p class="bullet">Led 9-month telephony infrastructure migration (BBIX → SoftBank cross-connect) with zero
+          downtime.</p>
+      </div>
+      <div class="card">
+        <h3>Customer Service Partner Specialist – Booking.com Japan K.K.</h3>
+        <p class="bullet">Supported 28M+ global partners via Extranet; debugged API, DNS, and CDN issues.</p>
+        <p class="bullet">Mentored 10 new hires and documented runbooks in Confluence.</p>
+      </div>
+      <div class="card">
+        <h3>Management Staff – Technopia Co., Ltd.</h3>
+        <p class="bullet">Managed ophthalmic equipment imports for 200+ hospitals; exceeded 200% of 2017 sales targets.
+        </p>
+        <p class="bullet">Negotiated NDAs and global partnership contracts; created sales presentations and forecasts.
+        </p>
+>>>>>>> 1003d02 (update)
       </div>
     </section>
 
@@ -339,6 +510,7 @@
         <div class="card">
           <h3>Education</h3>
           <p class="bullet"><b>Canadian College of Technology & Business</b> — Post-Secondary Diploma in Cybersecurity
+<<<<<<< HEAD
             Risk Management</p>
         </div>
         <div class="card">
@@ -346,6 +518,20 @@
           <p class="bullet">• Cisco: Introduction to Cybersecurity; Linux Unhatched</p>
           <p class="bullet">• CCNA 200-301 course (Udemy), ISC2 prep course</p>
           <p class="bullet">• Cyber Job Simulations — Deloitte, Fujitsu, Mastercard (Sep 2025)</p>
+=======
+            Risk Management (May 2024 – Dec 2025)</p>
+          <p class="bullet"><b>Kanda Institute of Foreign Languages</b> — Diploma of English in English Major (Apr 2015
+            – Mar 2017)</p>
+          <p class="bullet"><b>Obihiro Kita High School</b> — High School Diploma (Apr 2011 – Mar 2014)</p>
+        </div>
+        <div class="card">
+          <h3>Certifications</h3>
+          <p class="bullet">CCNA 200-301 (Udemy) – In Progress</p>
+          <p class="bullet">Splunk Core – Self-Study Labs</p>
+          <p class="bullet">Cisco: Introduction to Cybersecurity, Linux Unhatched</p>
+          <p class="bullet">Deloitte | Fujitsu | Mastercard Cyber Job Simulations (Sep 2025)</p>
+          <p class="bullet">ISC2 CC Preparation (LinkedIn, Dec 2024)</p>
+>>>>>>> 1003d02 (update)
         </div>
       </div>
     </section>
@@ -356,7 +542,11 @@
       <div class="card">
         <p><a href="mailto:maho.y0707@gmail.com">maho.y0707@gmail.com</a> •
           <a href="https://www.linkedin.com/in/maho-yoshimoto" target="_blank" rel="noopener">LinkedIn</a> •
+<<<<<<< HEAD
           <a href="https://github.com/mahoon-0707" target="_blank" rel="noopener">GitHub</a>
+=======
+          <a href="https://github.com/mahoyoshimoto" target="_blank" rel="noopener">GitHub</a>
+>>>>>>> 1003d02 (update)
         </p>
       </div>
     </section>
